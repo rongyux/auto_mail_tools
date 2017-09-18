@@ -91,15 +91,15 @@ if __name__ == "__main__":
     else:
         msg = MIMEText(content,'html','gbk')
         msg['Subject'] ="结婚垂类指标监控_"+collect_date
-        msg['From'] = 'rongyu01@baidu.com'
-        #msg['To'] = 'rongyu01@baidu.com'
-        msg['To'] = 'liusheng02@baidu.com,ztc-stra@baidu.com,gaoyucai@baidu.com,shenlin04@baidu.com,renfeng01@baidu.com,rongyu01@baidu.com'
-        #msg['Cc'] = 'ztc-auction@baidu.com,ztc-model@baidu.com'
-        sender="rongyu01@baidu.com"
-        receiver=["liusheng02@baidu.com","ztc-stra@baidu.com","gaoyucai@baidu.com","shenlin04@baidu.com","renfeng01@baidu.com","rongyu01@baidu.com"]
-        #receiver=["rongyu01@baidu.com"]
+        msg['From'] = 'rongyu01@163.com'
+        msg['To'] = 'rongyu01@163.com'
+  
+        msg['Cc'] = 'xxx@163.com'
+        sender="rongyu01@163.com"
+
+        receiver=["rongyu01@163.com"]
         try:
-            svr = smtplib.SMTP('hotswap-in.baidu.com')
+            svr = smtplib.SMTP('hotswap-in.163.com')
             svr.sendmail(sender,receiver, msg.as_string())
             print "email send ok"
         except smtplib.SMTPException:
